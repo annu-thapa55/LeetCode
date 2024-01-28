@@ -1,5 +1,6 @@
 class Solution 
 {
+    // function for checking if the array is empty or not
     public boolean isEmpty(int[] arr)
     {
        if(arr.length == 0 || arr == null )
@@ -7,6 +8,7 @@ class Solution
         else
             return false; 
     }
+
     public double findMedianSortedArrays(int[] nums1, int[] nums2) 
     {
 
@@ -29,6 +31,12 @@ class Solution
         int j = 0; 
         int k = 0;
 
+        /**
+            if first array is empty: 
+            - and if there is only one element in the second array, return this sole element of second array
+            - and if the number of elements in second array is odd, return the middle element
+            - and if the number of elements in second array is even, return the average of middle elements
+         */ 
         if(isEmpty(nums1))
         {
             int medianIndex = numberOfElements /2; 
@@ -50,7 +58,12 @@ class Solution
             }
         }
 
-        
+         /**
+            if second array is empty: 
+            - and if there is only one element in the first array, return this sole element of first array
+            - and if the number of elements in first array is odd, return the middle element
+            - and if the number of elements in first array is even, return the average of middle elements
+         */ 
         if(isEmpty(nums2))
         {
             int medianIndex = numberOfElements /2; 
@@ -71,11 +84,17 @@ class Solution
             }
         }
 
+        /**
+            If both arrays are empty, retutn 0.0
+         */
         if(isEmpty(nums1) && isEmpty(nums2))
         {
             return 0.0;
         }
 
+        /**
+            If both arrays have only one elements in each, simply return the average
+         */
         if(nums1.length ==1 && nums2.length ==1)
         {
             double result = ((double)(nums1[0] + (double)nums2[0]) /2);
