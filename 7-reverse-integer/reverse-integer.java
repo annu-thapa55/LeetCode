@@ -21,9 +21,12 @@ class Solution
             // modular as the last digit
             lastDigit = x%10;
             
-            //checking the condition for the out of boundry case
-            if ( reversed < (-1 * Math.pow(2,31)/10) || reversed > (Math.pow(2,31)-1)/10)
+            //checking the condition for the out of boundry case. We can simply use Integer.MAX_VALUE and Integer.MIN_VALUE too
+            //if ( reversed < (-1 * Math.pow(2,31)/10) || reversed > (Math.pow(2,31)-1)/10)
+
+            if(reversed < Integer.MIN_VALUE/10 || reversed > Integer.MAX_VALUE/10)
                 return 0;
+
             else
                 //updating reversed number
                 reversed = reversed * 10 + lastDigit;
