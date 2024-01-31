@@ -41,7 +41,10 @@ class Solution
                 //swapping the element when j points to 0 and i points to non-zero elements
                 if (nums[j] == 0 && nums[i] != 0)
                 {
-                    nums = swap(i, j, nums);
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                    //nums = swap(i, j, nums);
                     j++;
                 }
 
