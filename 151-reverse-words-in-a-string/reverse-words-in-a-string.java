@@ -7,46 +7,14 @@ class Solution
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i = words.length -1; i>=0; i--)
+        for(int i = words.length -1; i>0; i--)
         {
-            if ( i == 0)
-            {
-                sb.append(words[i]);
-            }
-            else
-            {
-                sb.append(words[i]+" ");
-            }
-            
+            sb.append(words[i]+" ");
+           
         }
 
-       /* //stack of type string
-        Stack<String>stack = new Stack<>();
-        
-        //convert the string to array of words and iterate through each word
-        for(String word: words)
-        {
-            //push a word in a stack in each iteration
-            stack.push(word);
-        }
+        sb.append(words[0]);
 
-        StringBuilder sb = new StringBuilder();
-        
-        //counter to indicate the first and last elements
-        int count =0;
-        while(!stack.isEmpty())
-        {
-            if (count == words.length-1)
-            {
-                sb.append(stack.pop());
-                count++;
-            }
-            else
-            {
-                sb.append(stack.pop()+ " ");
-                count++;
-            }
-        }*/
         return sb.toString();
 
     }
