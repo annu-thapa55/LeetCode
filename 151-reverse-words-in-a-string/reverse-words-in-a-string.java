@@ -4,7 +4,23 @@ class Solution
     {
         //string array that stores the words in input string s.
         String[] words = s.trim().split("\\s* ");
-        //stack of type string
+
+        String result ="";
+
+        for(int i = words.length -1; i>=0; i--)
+        {
+            if ( i == 0)
+            {
+                result = result+ words[i] ;
+            }
+            else
+            {
+                result = result+  words[i] +" ";
+            }
+            
+        }
+
+       /* //stack of type string
         Stack<String>stack = new Stack<>();
         
         //convert the string to array of words and iterate through each word
@@ -30,8 +46,8 @@ class Solution
                 sb.append(stack.pop()+ " ");
                 count++;
             }
-        }
-        return sb.toString();
+        }*/
+        return result;
 
     }
 }
