@@ -49,8 +49,8 @@ class Solution
             int subIndex = 0;
 
             //converting both string inputs into lower case
-            s = s.toLowerCase();
-            t = t.toLowerCase();
+            //s = s.toLowerCase();
+            //t = t.toLowerCase();
 
             //converting the string into array to character
             char[] subSequence = s.toCharArray();
