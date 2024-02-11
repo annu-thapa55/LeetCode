@@ -4,6 +4,7 @@ class Solution
     public double findMaxAverage(int[] nums, int k) 
     {
        
+        double maxAverage =0.0;
 
         double maxSum = 0.0;
         double currentSum = 0.0;
@@ -26,9 +27,11 @@ class Solution
             maxSum = Math.max(currentSum,maxSum);
         }
 
+        maxAverage = maxSum/k;
+
         
         //return average
-        return maxSum/k;
+        return maxAverage;
 
 
 
