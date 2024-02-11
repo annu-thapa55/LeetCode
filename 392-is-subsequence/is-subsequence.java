@@ -30,8 +30,8 @@ class Solution
     public boolean isSubsequence(String s, String t) 
     {
        
-        //if(!withinConstraint(s,t))
-            //return false;
+        if(!withinConstraint(s,t))
+            return false;
 
         if( isEmpty(s) &&  !isEmpty(t))
             return true;
