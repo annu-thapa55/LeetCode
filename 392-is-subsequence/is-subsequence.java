@@ -48,10 +48,6 @@ class Solution
             //variable to iterate through sub-sequence
             int subIndex = 0;
 
-            //converting both string inputs into lower case
-            //s = s.toLowerCase();
-            //t = t.toLowerCase();
-
             //converting the string into array to character
             char[] subSequence = s.toCharArray();
             char[] sequence = t.toCharArray();
