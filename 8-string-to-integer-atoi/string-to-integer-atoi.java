@@ -10,9 +10,6 @@ class Solution
             return 0;
         }
         
-        //convert the string into character array
-        char[] charArr = s.toCharArray();
-        
         //extracted int value to be returned
         int result = 0;
         
@@ -23,32 +20,32 @@ class Solution
         int count = 0;
         
         //taking care of white spaces
-        while (count < charArr.length && charArr[count] ==' '  )
+        while (count < s.length() && s.charAt(count) ==' '  )
         {
             count++;
         }
 
         //returning 0 for the string with only white spaces
-        if(count >= charArr.length)
+        if(count >= s.length())
         {
             return 0;
         }
         
         //taking care of +, -, or none symbol after spaces
-        if(count < charArr.length && charArr[count] == '-')
+        if(count < s.length() && s.charAt(count) == '-')
         {
             positive = false; 
             count++;
         }
         
-        else if (count < charArr.length && charArr[count] == '+' )
+        else if (count < s.length() && s.charAt(count) == '+' )
         {
             positive = true; 
             count++;
         }
 
         //taking care of 0s after the +, - or spaces
-        while (count < charArr.length && charArr[count] == 0)
+        while (count < s.length() && s.charAt(count) == 0)
         {
             count++;
         }
@@ -60,10 +57,10 @@ class Solution
 
         //variable for identifying the first digit
         int firstDigit = count; 
-        while (digitCount < charArr.length && charArr[digitCount] >= '0' && charArr[digitCount] <= '9')
+        while (digitCount < s.length() && s.charAt(digitCount)  >= '0' && s.charAt(digitCount)  <= '9')
         {
             //extracting the digit from character array
-            int digit = Character.getNumericValue(charArr[digitCount]); 
+            int digit = Character.getNumericValue(s.charAt(digitCount)); 
 
             //calculating result for the first digit
             if(digitCount == firstDigit)
