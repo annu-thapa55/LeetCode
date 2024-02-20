@@ -13,7 +13,7 @@ class Solution
         StringBuilder result = new StringBuilder();
 
         //for loop to go through each value
-        for ( int index =0; index< arrValue.length && num >0; index++)
+        for ( int index =0; num >0; index++)
         {
             //keep on subtracting the currently pointed value from the number and add the corresponding symbol
             while(arrValue[index] <= num)
@@ -27,3 +27,4 @@ class Solution
        
     }
 }
+
