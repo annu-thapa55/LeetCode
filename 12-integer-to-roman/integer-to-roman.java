@@ -1,12 +1,13 @@
 class Solution 
 {
-    public String intToRoman(int num) 
-    {
-        //creating array with the values
-        int[] arrValue = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};    
+     //creating array with the values
+        final static int[] arrValue = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};    
 
         //creating corresponding symbols for values in array arrValue
-        String[] arrSymbol = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+        final static String[] arrSymbol = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+    public String intToRoman(int num) 
+    {
+       
 
         //resultant string
         StringBuilder result = new StringBuilder();
