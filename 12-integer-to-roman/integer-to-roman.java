@@ -20,7 +20,7 @@ class Solution
             while(arrValue[index] <= num)
             {  
                 result.append(arrSymbol[index]);   
-                num -= arrValue[index];     
+                num = num - arrValue[index];     
                              
             }
         }
