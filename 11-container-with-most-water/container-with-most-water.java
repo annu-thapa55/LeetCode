@@ -17,13 +17,14 @@ class Solution
         
         while (startIndex < endIndex)
         {
-            maxArea = Math.max((Math.min(height[startIndex],height[endIndex]) * (endIndex-startIndex)), maxArea);
+            int minHeight = Math.min(height[startIndex],height[endIndex]);
+            maxArea = Math.max((minHeight* (endIndex-startIndex)), maxArea);
             
-            if(height[startIndex] < height[endIndex] )
+            while(startIndex < endIndex && height[startIndex] <= minHeight)
             {
                 startIndex++;
             }
-            else
+            while (startIndex < endIndex && height[endIndex] <= minHeight)
             {
                 endIndex--;
             }
