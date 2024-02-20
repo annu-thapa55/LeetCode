@@ -19,8 +19,9 @@ class Solution
             while(arrValue[index] <= num)
             {   
                       
-                num -= arrValue[index];
+                
                 result.append(arrSymbol[index]);  
+                num -= arrValue[index];
                 
             }
         }
