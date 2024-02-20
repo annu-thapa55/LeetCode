@@ -18,8 +18,7 @@ class Solution
             //keep on subtracting the currently pointed value from the number and add the corresponding symbol
             while(arrValue[index] <= num)
             {   
-                      
-                
+                       
                 result.append(arrSymbol[index]);  
                 num -= arrValue[index];
                 
