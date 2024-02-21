@@ -7,14 +7,12 @@ class Solution
     {
         int result = 0;
         StringBuilder inputStr = new StringBuilder(s);
-        int symbolLength = 0;
         for(int i=0; i<arrSymbol.length && inputStr.length() > 0; i++)
         {
-            symbolLength = arrSymbol[i].length();
-            while(inputStr.length()>= symbolLength && inputStr.substring(0,symbolLength).equals(arrSymbol[i]))
+            while(inputStr.length()>= arrSymbol[i].length() && inputStr.substring(0,arrSymbol[i].length()).equals(arrSymbol[i]))
             {
                 result = result + arrValue[i];
-                inputStr = inputStr.replace(0, symbolLength, "");
+                inputStr = inputStr.replace(0, arrSymbol[i].length(), "");
                 
             }
         }
