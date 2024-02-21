@@ -13,12 +13,9 @@ class Solution
             symbolLength = arrSymbol[i].length();
             while(inputStr.length()>= symbolLength && inputStr.substring(0,symbolLength).equals(arrSymbol[i]))
             {
-                System.out.println("inputStr value before="+inputStr);
                 result = result + arrValue[i];
-                System.out.println("result="+result);
                 inputStr = inputStr.replace(0, symbolLength, "");
-                System.out.println("inputStr value after="+inputStr);
-               
+                
             }
         }
         return result;
