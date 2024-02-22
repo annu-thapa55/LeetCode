@@ -2,16 +2,6 @@
 class Solution 
 {
 
-
-    public boolean isEmpty(int[] nums)
-    {
-        if (nums.length ==0 || nums == null)
-        {
-            return true;
-        }
-        else
-            return false;
-    }
     public List<List<Integer>> threeSum(int[] nums) 
     {
         List<List<Integer>> result = new ArrayList<>();
@@ -28,16 +18,9 @@ class Solution
             return null;
         }
 
-        if(!isEmpty(nums))
-        {
-            //sort the array
-            Arrays.sort(nums);
-        }
-        else
-        {
-            return null;
-        }
-      
+        Arrays.sort(nums);
+        
+        
             
         for(int i =0; i<nums.length; i++)
         {
