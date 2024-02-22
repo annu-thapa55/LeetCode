@@ -13,14 +13,7 @@ class Solution
         int k=0;
         int complementRes = 0;
 
-        if(nums.length<3 || nums.length >30000)
-        {
-            return null;
-        }
-
         Arrays.sort(nums);
-        
-        
             
         for(int i =0; i<nums.length; i++)
         {
@@ -46,8 +39,7 @@ class Solution
  
                     if(secondNum.contains(nums[j]) && secondNumSeen)
                     {
-
-                      
+       
                         j++;
                         continue;
                     }
