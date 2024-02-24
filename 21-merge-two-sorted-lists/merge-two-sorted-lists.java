@@ -13,7 +13,7 @@ class Solution
     public ListNode mergeTwoLists(ListNode list1, ListNode list2)
     {
         // creating a dummy node as a new node.  
-        ListNode result = new ListNode();
+        ListNode result = new ListNode(0);
         //temporary node pointing to newly created dummy node to perform weaving
         ListNode temp = result;
 
