@@ -13,7 +13,7 @@ class Solution
     public ListNode mergeTwoLists(ListNode list1, ListNode list2)
     {
         // creating a dummy node as a new node.  
-        ListNode result = new ListNode(0);
+        ListNode result = new ListNode();
         //temporary node pointing to newly created dummy node to perform weaving
         ListNode temp = result;
 
@@ -44,7 +44,7 @@ class Solution
             temp.next = list1;
         }
         // if list2 is not exhausted
-        else 
+        else  
         {
             temp.next = list2;
         }
